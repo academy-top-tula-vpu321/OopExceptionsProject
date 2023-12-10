@@ -63,20 +63,24 @@ void func1()
 int main()
 {
 
-    //try
-    //{
-    //    //std::cout << Div(10, 0);
-    //    Func(-5);
-    //}
-    //catch(int e)
-    //{
-    //    if (e == -1)
-    //        std::cout << "Divide by zero!\n";
-    //}
-    //catch (const char* e)
-    //{
-    //    std::cout << "Error: " << e << "\n";
-    //}
+    try
+    {
+        //std::cout << Div(10, 0);
+        Func(-5);
+    }
+    catch (int e)
+    {
+        if (e == -1)
+            std::cout << "Divide by zero!\n";
+    }
+    catch (const char* e)
+    {
+        std::cout << "Error: " << e << "\n";
+    }
+    catch (...)
+    {
+        // for all types exceptions
+    }
     
     func1();
 
